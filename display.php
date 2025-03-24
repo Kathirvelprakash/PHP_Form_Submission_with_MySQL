@@ -4,7 +4,8 @@ $conn = new mysqli("localhost", "root", "", "user_data");
 $sql = "SELECT * FROM users";
 $result = $conn->query($sql);
 
-echo "<table border='1'>
+echo "<center><h2>Registered Users</h2>";
+echo "<table border='1' style='width:80%; text-align:center;'>
 <tr>
 <th>ID</th>
 <th>Name</th>
@@ -32,5 +33,5 @@ while ($row = $result->fetch_assoc()) {
     <td><a href='delete.php?id=" . $row['id'] . "'>Delete</a></td>
     </tr>";
 }
-echo "</table>";
+echo "</table></center>";
 ?>
