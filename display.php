@@ -1,6 +1,5 @@
 <?php
 $conn = new mysqli("localhost", "root", "", "user_data");
-
 $sql = "SELECT * FROM users";
 $result = $conn->query($sql);
 
@@ -30,7 +29,10 @@ while ($row = $result->fetch_assoc()) {
     <td>" . $row['country'] . "</td>
     <td>" . $row['bio'] . "</td>
     <td><img src='" . $row['profile_picture'] . "' width='50'></td>
-    <td><a href='delete.php?id=" . $row['id'] . "'>Delete</a></td>
+    <td>
+        <a href='edit.php?id=" . $row['id'] . "'>Edit</a> | 
+        <a href='delete.php?id=" . $row['id'] . "'>Delete</a>
+    </td>
     </tr>";
 }
 echo "</table></center>";
