@@ -58,7 +58,7 @@
             </tr>
             <tr>
                 <td>Age:</td>
-                <td><input type="number" name="age" required></td>
+                <td><input type="number" name="age" min="1" required></td>
             </tr>
             <tr>
                 <td>Gender:</td>
