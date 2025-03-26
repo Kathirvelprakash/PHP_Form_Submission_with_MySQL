@@ -89,7 +89,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <td>Hobbies:</td>
                 <td>
                     <?php
-                    // Fix: Convert stored hobbies string into an array safely
                     $hobbies = isset($row["hobbies"]) ? $row["hobbies"] : "";
                     $selected_hobbies = is_string($hobbies) ? explode(", ", $hobbies) : [];
                     ?>
